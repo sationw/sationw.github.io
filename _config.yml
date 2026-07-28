@@ -50,6 +50,11 @@ defaults:
     values:
       layout: "note"
 
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
 # Exclude
 exclude:
   - Gemfile
