@@ -1,21 +1,21 @@
 # ============================================
-# CBRC.github.io - Site Configuration
+# sationw.github.io - Site Configuration
 # ============================================
-title: "CBRC 的博客"
+title: "Sation 的博客"
 tagline: "学习 · 编程 · 探索"
 description: "个人博客，分享 Python、数据科学、机器学习的学习笔记和项目实践"
-url: "https://CBRC.github.io"
+url: "https://sationw.github.io"
 baseurl: ""
 
 # Author
 author:
-  name: "CBRC"
+  name: "Sation"
   email: ""
-  github: "CBRC"
+  github: "sationw"
 
 # Social links
 social:
-  github: "https://github.com/CBRC"
+  github: "https://github.com/sationw"
 
 # Build settings
 markdown: kramdown
@@ -38,7 +38,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "CBRC"
+      author: "Sation"
   - scope:
       path: ""
       type: "projects"

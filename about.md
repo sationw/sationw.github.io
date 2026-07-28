@@ -10,13 +10,13 @@ permalink: /about/
       <i class="fas fa-user-circle"></i>
     </div>
     <div class="about-text">
-      <h2>CBRC</h2>
+      <h2>Sation</h2>
       <p style="color: var(--text-light); font-size: 1.1rem;">
         Python 开发者 · 数据科学爱好者 · 终身学习者
       </p>
       
       <p>
-        你好！我是 CBRC，一个热爱编程和数据科学的开发者。
+        你好！我是 Sation，一个热爱编程和数据科学的开发者。
         这个网站是我记录学习过程、分享技术知识的地方。
       </p>
 
@@ -41,7 +41,7 @@ permalink: /about/
 
       <h3>联系方式</h3>
       <p>
-        <i class="fab fa-github"></i> GitHub: <a href="https://github.com/CBRC" target="_blank">github.com/CBRC</a>
+        <i class="fab fa-github"></i> GitHub: <a href="https://github.com/sationw" target="_blank">github.com/sationw</a>
       </p>
     </div>
   </div>

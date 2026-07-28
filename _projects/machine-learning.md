@@ -5,7 +5,7 @@ date: 2026-06-15
 description: "机器学习算法的学习笔记与实践项目"
 icon: "fas fa-brain"
 tech_stack: [Python, Scikit-learn, NumPy, Pandas, Matplotlib]
-github_url: "https://github.com/CBRC"
+github_url: "https://github.com/sationw"
 ---
 
 ## 项目简介

@@ -5,7 +5,7 @@ date: 2026-07-01
 description: "基于 Python 的电磁仿真数据分析工具集"
 icon: "fas fa-magnet"
 tech_stack: [Python, NumPy, Pandas, Matplotlib, TDMS]
-github_url: "https://github.com/CBRC"
+github_url: "https://github.com/sationw"
 ---
 
 ## 项目简介
