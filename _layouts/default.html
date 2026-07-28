@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | {{ site.tagline }}{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- SEO -->
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  {% feed_meta %}
+  {% seo %}
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="{{ '/' | relative_url }}" class="navbar-brand">
+        <i class="fas fa-code"></i> {{ site.title }}
+      </a>
+      <ul class="navbar-nav">
+        <li><a href="{{ '/' | relative_url }}"><i class="fas fa-home"></i> 首页</a></li>
+        <li><a href="{{ '/about' | relative_url }}"><i class="fas fa-user"></i> 关于</a></li>
+        <li><a href="{{ '/blog' | relative_url }}"><i class="fas fa-pen-fancy"></i> 博客</a></li>
+        <li><a href="{{ '/projects' | relative_url }}"><i class="fas fa-project-diagram"></i> 项目</a></li>
+        <li><a href="{{ '/notes' | relative_url }}"><i class="fas fa-sticky-note"></i> 笔记</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    {{ content }}
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. Powered by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> &amp; <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>.</p>
+        </div>
+        <div class="footer-social">
+          <a href="{{ site.social.github }}" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

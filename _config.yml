@@ -1,0 +1,61 @@
+# ============================================
+# CBRC.github.io - Site Configuration
+# ============================================
+title: "CBRC 的博客"
+tagline: "学习 · 编程 · 探索"
+description: "个人博客，分享 Python、数据科学、机器学习的学习笔记和项目实践"
+url: "https://CBRC.github.io"
+baseurl: ""
+
+# Author
+author:
+  name: "CBRC"
+  email: ""
+  github: "CBRC"
+
+# Social links
+social:
+  github: "https://github.com/CBRC"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:title/
+  notes:
+    output: true
+    permalink: /notes/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "CBRC"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: "note"
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+
+# Theme
+theme: null

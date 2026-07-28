@@ -1,0 +1,98 @@
+---
+layout: default
+title: 首页
+---
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1>👋 你好，我是 CBRC</h1>
+    <p class="subtitle">Python 开发者 · 数据科学爱好者 · 终身学习者</p>
+    <p class="tagline">记录学习路上的点滴，分享编程与数据的魅力</p>
+    <div class="hero-actions">
+      <a href="{{ '/about' | relative_url }}" class="btn btn-primary">
+        <i class="fas fa-user"></i> 关于我
+      </a>
+      <a href="{{ '/blog' | relative_url }}" class="btn btn-outline">
+        <i class="fas fa-pen-fancy"></i> 阅读博客
+      </a>
+      <a href="{{ '/projects' | relative_url }}" class="btn btn-outline">
+        <i class="fas fa-project-diagram"></i> 查看项目
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">在这里你可以找到</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-pen-fancy"></i></div>
+        <h3>博客文章</h3>
+        <p>技术分享、学习心得、编程技巧，记录成长过程中的每一个里程碑。</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
+        <h3>项目展示</h3>
+        <p>Python 数据科学、机器学习、电磁仿真等项目的实践与总结。</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-sticky-note"></i></div>
+        <h3>学习笔记</h3>
+        <p>系统整理的知识笔记，涵盖 Python、数据科学、机器学习等领域。</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-code"></i></div>
+        <h3>开源分享</h3>
+        <p>GitHub 上的开源项目，与社区一起成长，让知识流动起来。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Recent Posts -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">最新文章</h2>
+    <ul class="post-list">
+      {% for post in site.posts limit:5 %}
+      <li class="post-item">
+        <div class="post-date-badge">
+          <span class="day">{{ post.date | date: "%d" }}</span>
+          <span class="month">{{ post.date | date: "%b" }}</span>
+        </div>
+        <div class="post-info">
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+          {% if post.categories %}
+          <div class="post-categories">
+            <i class="fas fa-folder"></i> {{ post.categories | join: ", " }}
+          </div>
+          {% endif %}
+        </div>
+      </li>
+      {% else %}
+      <li class="post-item">
+        <div class="post-info">
+          <p style="color: var(--text-muted);">还没有文章，敬请期待！</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- GitHub Stats -->
+<section class="section">
+  <div class="container" style="text-align: center;">
+    <h2 class="section-title">GitHub</h2>
+    <p style="color: var(--text-light); margin-bottom: 1.5rem;">
+      欢迎 Star 和 Fork 我的项目，一起交流学习！
+    </p>
+    <a href="https://github.com/CBRC" target="_blank" class="btn btn-primary">
+      <i class="fab fa-github"></i> 访问我的 GitHub
+    </a>
+  </div>
+</section>
