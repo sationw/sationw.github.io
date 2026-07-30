@@ -7,3 +7,17 @@ vendor/
 .DS_Store
 *.swp
 *.swo
+
+# VS Code
+.vscode/
+
+# 本地说明文件
+instruction.md
+
+# 日志文件
+*.log
+
+# 临时文件
+*~
+*.bak
+*.tmp
