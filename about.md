@@ -6,9 +6,7 @@ permalink: /about/
 
 <div class="about-section">
   <div class="about-content">
-    <div class="about-avatar-placeholder">
-      <i class="fas fa-user-circle"></i>
-    </div>
+    <img src="{{ '/assets/images/avatar.jpg' | relative_url }}" class="about-avatar" alt="Sation">
     <div class="about-text">
       <h2>Sation</h2>
       <p style="color: var(--text-light); font-size: 1.1rem;">
@@ -42,6 +40,12 @@ permalink: /about/
       <h3>联系方式</h3>
       <p>
         <i class="fab fa-github"></i> GitHub: <a href="https://github.com/sationw" target="_blank">github.com/sationw</a>
+      </p>
+      <p>
+        <i class="fas fa-envelope"></i> 邮箱: <a href="mailto:sgelinlog@163.com">sgelinlog@163.com</a>
+      </p>
+      <p>
+        <i class="fab fa-orcid"></i> ORCID: <a href="https://orcid.org/0000-0000-0000-0000" target="_blank">0000-0000-0000-0000</a> <span style="color: var(--text-muted); font-size: 0.85rem;">(待更新)</span>
       </p>
     </div>
   </div>

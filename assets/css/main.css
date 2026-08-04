@@ -337,6 +337,40 @@ pre code {
   margin-top: 1rem;
 }
 
+/* --- Gallery --- */
+.gallery {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  margin: 0;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+.gallery-item figcaption {
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  color: var(--text-light);
+  font-style: italic;
+  line-height: 1.8;
+}
+
+.gallery-item figcaption span {
+  display: block;
+}
+
 /* --- Blog List --- */
 .post-list {
   list-style: none;
