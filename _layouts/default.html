@@ -15,7 +15,7 @@
   {% feed_meta %}
   {% seo %}
 </head>
-<body>
+<body class="{% if page.url == '/' or page.url == '/index.html' %}home{% endif %}">
   <!-- Navigation -->
   <nav class="navbar">
     <div class="container">

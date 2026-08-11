@@ -10,31 +10,27 @@ permalink: /about/
     <div class="about-text">
       <h2>Sation</h2>
       <p style="color: var(--text-light); font-size: 1.1rem;">
-        Python 开发者 · 数据科学爱好者 · 终身学习者
+        Rschr · Std · IT · BME
       </p>
       
       <p>
-        你好！我是 Sation，一个热爱编程和数据科学的开发者。
-        这个网站是我记录学习过程、分享技术知识的地方。
+        你好！我是 Sation。欢迎来到我的数字空间。
       </p>
 
       <p>
-        我目前专注于 Python 编程，涉及数据科学、机器学习、电磁仿真等领域。
-        我相信持续学习和知识共享是成长的关键。
+      <ul class="bio-list">
+        <li>🔬 研究：专注于计算机技术🖥️与生物医学工程🧬交叉学科领域，研究方向医学成像与电磁检测，致力于用计算机技术解决疾病诊断与治疗中的实际问题</li>
+        <li>✨ 兴趣：篮球、乒乓、羽毛球等</li>
+        <li>🛠️ 爱好：DIY手工制作、阅读</li>
+      </ul>
       </p>
 
       <h3>技能</h3>
       <div class="skills">
         <span class="skill-badge">Python</span>
-        <span class="skill-badge">NumPy</span>
-        <span class="skill-badge">Pandas</span>
-        <span class="skill-badge">Matplotlib</span>
-        <span class="skill-badge">Scikit-learn</span>
-        <span class="skill-badge">Machine Learning</span>
-        <span class="skill-badge">Data Science</span>
+        <span class="skill-badge">COMSOL</span>
         <span class="skill-badge">EM Simulation</span>
-        <span class="skill-badge">Git</span>
-        <span class="skill-badge">Linux</span>
+        <span class="skill-badge">DSP</span>
       </div>
 
       <h3>联系方式</h3>
