@@ -4,23 +4,24 @@
 
 /* --- CSS Variables --- */
 :root {
-  --primary: #2563eb;
-  --primary-dark: #1d4ed8;
-  --primary-light: #dbeafe;
-  --secondary: #0f172a;
-  --accent: #06b6d4;
-  --bg: #ffffff;
-  --bg-alt: #f8fafc;
-  --bg-card: #ffffff;
-  --text: #1e293b;
-  --text-light: #64748b;
-  --text-muted: #94a3b8;
-  --border: #e2e8f0;
+  --primary: #a855f7;
+  --primary-dark: #9333ea;
+  --primary-light: rgba(168, 85, 247, 0.15);
+  --secondary: #f3f4f6;
+  --accent: #818cf8;
+  --bg: #050508;
+  --bg-alt: #0c0c14;
+  --bg-card: rgba(20, 20, 30, 0.55);
+  --bg-deep: #030308;
+  --text: #e2e8f0;
+  --text-light: #9ca3af;
+  --text-muted: #7c8290;
+  --border: rgba(255, 255, 255, 0.1);
   --radius: 12px;
   --radius-sm: 8px;
-  --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
-  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.25);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.35), 0 2px 4px -1px rgba(0,0,0,0.25);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.4), 0 4px 6px -2px rgba(0,0,0,0.3);
   --transition: all 0.3s ease;
 }
 
@@ -95,16 +96,17 @@ code {
   padding: 0.2em 0.4em;
   background: var(--bg-alt);
   border-radius: 4px;
-  color: var(--primary-dark);
+  color: #d8b4fe;
 }
 
 pre {
-  background: var(--secondary);
+  background: var(--bg-deep);
   color: #e2e8f0;
   padding: 1.2rem;
   border-radius: var(--radius-sm);
   overflow-x: auto;
   margin: 1.5rem 0;
+  border: 1px solid var(--border);
 }
 
 pre code {
@@ -127,7 +129,7 @@ pre code {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(255,255,255,0.95);
+  background: rgba(10, 10, 15, 0.8);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
   height: 64px;
@@ -222,7 +224,7 @@ pre code {
 .hero {
   padding: 6rem 0 4rem;
   text-align: center;
-  background: linear-gradient(135deg, var(--primary-light) 0%, #f0f9ff 50%, #fdf2f8 100%);
+  background: transparent;
 }
 
 .hero h1 {
@@ -319,6 +321,8 @@ pre code {
 
 .card {
   background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: var(--radius);
   padding: 1.75rem;
   box-shadow: var(--shadow);
@@ -328,6 +332,7 @@ pre code {
 
 .card:hover {
   transform: translateY(-4px);
+  border-color: rgba(168, 85, 247, 0.4);
   box-shadow: var(--shadow-lg);
 }
 
@@ -364,7 +369,7 @@ pre code {
   border-radius: var(--radius);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-lg);
-  background: var(--secondary);
+  background: var(--bg-deep);
 }
 
 .slider-track {
@@ -552,6 +557,10 @@ pre code {
 /* --- Post Page --- */
 .post-page, .note-page {
   padding: 3rem 0;
+  background: rgba(10, 10, 15, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: var(--radius);
 }
 
 .post-header, .note-header {
@@ -627,7 +636,7 @@ pre code {
   display: inline-block;
   padding: 0.25rem 0.75rem;
   background: var(--primary-light);
-  color: var(--primary-dark);
+  color: #d8b4fe;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 500;
@@ -703,7 +712,8 @@ pre code {
 
 /* --- Footer --- */
 .footer {
-  background: var(--secondary);
+  background: var(--bg-deep);
+  border-top: 1px solid var(--border);
   color: #94a3b8;
   padding: 2rem 0;
   margin-top: 3rem;
@@ -742,6 +752,10 @@ pre code {
 /* --- Page Content --- */
 .page-content {
   padding: 3rem 0;
+  background: rgba(10, 10, 15, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: var(--radius);
 }
 
 .page-body {
@@ -758,7 +772,7 @@ pre code {
     left: 0;
     right: 0;
     transform: none;
-    background: rgba(255,255,255,0.98);
+    background: rgba(10, 10, 15, 0.98);
     flex-direction: column;
     padding: 1rem;
     border-bottom: 1px solid var(--border);
@@ -834,7 +848,7 @@ pre code {
 }
 
 /* ============================================
-   Homepage Galaxy Background
+   Galaxy Background
    ============================================ */
 #galaxy-bg {
   position: fixed;
@@ -847,33 +861,7 @@ pre code {
   display: block;
 }
 
-body.home {
-  background-color: #050508;
-}
-
-body.home .navbar {
-  background: rgba(10, 10, 15, 0.8);
-  border-bottom-color: rgba(255, 255, 255, 0.08);
-}
-
-body.home .navbar-brand {
-  color: #f3f4f6 !important;
-}
-
-body.home .navbar-nav li a {
-  color: #a0a0ab !important;
-}
-
-body.home .navbar-nav li a:hover,
-body.home .navbar-nav li a.active {
-  color: #a855f7 !important;
-  background: rgba(168, 85, 247, 0.15);
-}
-
-body.home .hero {
-  background: transparent;
-}
-
+/* 首页 / 关于页使用动态星系，其他页面使用静态星系（由 galaxy.js 控制） */
 body.home .hero h1 {
   color: #f3f4f6;
 }
@@ -882,82 +870,12 @@ body.home .hero .tagline {
   color: #a0a0ab;
 }
 
-body.home .section-alt {
-  background: transparent;
-}
-
-body.home .section-title {
-  color: #f3f4f6;
-}
-
-body.home .card {
-  background: rgba(20, 20, 30, 0.55);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-}
-
-body.home .card:hover {
-  border-color: rgba(168, 85, 247, 0.4);
-}
-
-body.home .card h3 {
-  color: #f3f4f6;
-}
-
-body.home .card p {
-  color: #9ca3af;
-}
-
-body.home .card .card-icon {
-  color: #a855f7;
-}
-
-body.home .card .card-meta {
-  color: #7c8290;
-}
-
-body.home .post-item {
-  border-bottom-color: rgba(255, 255, 255, 0.08);
-}
-
-body.home .post-info h3 a {
-  color: #f3f4f6 !important;
-}
-
-body.home .post-info h3 a:hover {
-  color: #a855f7 !important;
-}
-
-body.home .post-info .post-excerpt {
-  color: #9ca3af;
-}
-
-body.home .post-info .post-categories {
-  color: #7c8290;
-}
-
-body.home .post-date-badge {
-  background: rgba(168, 85, 247, 0.15);
-}
-
-body.home .post-date-badge .day {
-  color: #a855f7;
-}
-
-body.home .post-date-badge .month {
-  color: #9ca3af;
-}
-
-body.home .btn-primary {
+body.home .btn-primary,
+body.about .btn-primary {
   background: #a855f7;
 }
 
-body.home .btn-primary:hover {
+body.home .btn-primary:hover,
+body.about .btn-primary:hover {
   background: #9333ea;
-}
-
-body.home .section > .container > p {
-  color: #a0a0ab;
 }

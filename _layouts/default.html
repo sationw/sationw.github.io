@@ -15,7 +15,11 @@
   {% feed_meta %}
   {% seo %}
 </head>
-<body class="{% if page.url == '/' or page.url == '/index.html' %}home{% endif %}">
+<body class="{% if page.url == '/' or page.url == '/index.html' %}home{% elsif page.url == '/about/' %}about{% endif %}">
+  <!-- 动态星系背景 Canvas（首页/关于页动态，其他页面静态） -->
+  <canvas id="galaxy-bg"></canvas>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
   <!-- Navigation -->
   <nav class="navbar">
     <div class="container">
@@ -63,5 +67,6 @@
 
   <!-- Scripts -->
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/galaxy.js' | relative_url }}"></script>
 </body>
 </html>
