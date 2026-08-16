@@ -1,3 +1,11 @@
+---
+layout: note
+title: "测量不确定度计算 — 参考资料总结"
+description: "GUM (JCGM 100:2008) 与 Monte Carlo 方法 (JCGM 101:2008) 的不确定度评定框架，以及反演值与仪器测量值比对的不确定度分析"
+category: 测量与数据分析
+date: 2026-08-16
+---
+
 # 测量不确定度计算 — 参考资料总结
 
 > References：
