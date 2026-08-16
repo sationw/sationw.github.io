@@ -287,9 +287,9 @@ $$
 
 若反演模型复杂或想更准确地评估比对结果，可用 Monte Carlo 方法同时处理所有不确定度来源：
 
-1. 从 <span>$A_1 \sim N(\bar{A}_1, u_{A_1}^2)$</span>、<span>$A_2 \sim N(\bar{A}_2, u_{A_2}^2)$</span>、<span>$A_3 \sim N(\bar{A}_3, u_{A_3}^2)$</span> 中抽样
+1. 从 $A_1 \sim N(\bar A_1, u_{A_1}^2)$、$A_2 \sim N(\bar A_2, u_{A_2}^2)$、$A_3 \sim N(\bar A_3, u_{A_3}^2)$ 中抽样
 2. 对每组样本计算 $K_{\text{calc}, i} = f(A_{1,i}, A_{3,i})$
-3. 从 <span>$K_{\text{meas}} \sim N(\bar{K}_{\text{meas}}, u_{K_{\text{meas}}}^2)$</span> 中独立抽样（或按仪器 PDF 抽样）
+3. 从 $K_{\text{meas}} \sim N(\bar K_{\text{meas}}, u_{K_{\text{meas}}}^2)$ 中独立抽样（或按仪器 PDF 抽样）
 4. 计算 $\Delta K_i = K_{\text{calc}, i} - K_{\text{meas}, i}$
 5. 统计 $\Delta K_i$ 的分布，得到：
    - 平均偏差 $\overline{\Delta K}$：反映**系统偏差**
@@ -301,7 +301,7 @@ $$
 如果同一参考样品也用仪器重复测量了 $n$ 次：
 
 - 获得 $K_{\text{meas},1}, K_{\text{meas},2}, \dots, K_{\text{meas},n}$
-- 平均值 <span>$\bar{K}_{\text{meas}}$</span> 和 A 类不确定度 <span>$u(\bar{K}_{\text{meas}}) = s_{K_{\text{meas}}} / \sqrt{n}$</span>
+- 平均值 $\bar K_{\text{meas}}$ 和 A 类不确定度 $u(\bar K_{\text{meas}}) = s_{K_{\text{meas}}} / \sqrt{n}$
 - 此时比对可采用**双样本 t 检验**的思路，或直接用 MCM 处理两组数据的 PDF
 
 
