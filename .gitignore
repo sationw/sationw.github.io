@@ -14,6 +14,10 @@ vendor/
 # 本地说明文件
 instruction.md
 
+# Bug 与修复记录（本地专用，不上传）
+BUGS_AND_FIXES.md
+*.buglog
+
 # 日志文件
 *.log
 
