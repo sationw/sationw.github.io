@@ -8,9 +8,13 @@ date: 2026-08-16
 
 # 测量不确定度计算
 
-> References：
-> - **[1]** **GUM** (JCGM 100:2008) — *Evaluation of measurement data — Guide to the expression of uncertainty in measurement*
-> - **[2]** **GUM Supplement 1** (JCGM 101:2008) — *Propagation of distributions using a Monte Carlo method*
+<blockquote>
+  <p><strong>References：</strong></p>
+  <ul>
+    <li><strong>[1]</strong> <strong>GUM</strong> (JCGM 100:2008) — <em>Evaluation of measurement data — Guide to the expression of uncertainty in measurement</em></li>
+    <li><strong>[2]</strong> <strong>GUM Supplement 1</strong> (JCGM 101:2008) — <em>Propagation of distributions using a Monte Carlo method</em></li>
+  </ul>
+</blockquote>
 ---
 
 ## 目录
@@ -38,11 +42,11 @@ date: 2026-08-16
 
 ---
 
-## 一、GUM 不确定度评定框架（JCGM 100:2008） {: #gum-framework }
+<h2 id="gum-framework">一、GUM 不确定度评定框架（JCGM 100:2008）</h2>
 
 > 参考：[1] JCGM 100:2008
 
-### 1.1 基本流程 {: #gum-basic-process }
+<h3 id="gum-basic-process">1.1 基本流程</h3>
 
 > 参考：[1] §8
 
@@ -55,7 +59,7 @@ date: 2026-08-16
 | **5. 确定扩展不确定度** | $U = k \cdot u_c(y)$，通常取 $k=2$（95%置信水平） |
 | **6. 报告结果** | $y \pm U$，注明包含因子 $k$ |
 
-### 1.2 不确定度传播定律（Law of Propagation of Uncertainty） {: #propagation-law }
+<h3 id="propagation-law">1.2 不确定度传播定律（Law of Propagation of Uncertainty）</h3>
 
 > 参考：[1] §5.1.2
 
@@ -77,7 +81,7 @@ $$
 c_i = \frac{\partial f}{\partial x_i}
 $$
 
-### 1.3 A 类评定（Type A Evaluation） {: #type-a-evaluation }
+<h3 id="type-a-evaluation">1.3 A 类评定（Type A Evaluation）</h3>
 
 > 参考：[1] §4.2
 
@@ -87,7 +91,7 @@ $$
 u(x_i) = \frac{s}{\sqrt{n}} = \sqrt{\frac{1}{n(n-1)} \sum_{k=1}^{n} (x_{ik} - \bar{x}_i)^2}
 $$
 
-### 1.4 B 类评定（Type B Evaluation） {: #type-b-evaluation }
+<h3 id="type-b-evaluation">1.4 B 类评定（Type B Evaluation）</h3>
 
 > 参考：[1] §4.3
 
@@ -97,7 +101,7 @@ $$
 - **均匀分布**：已知上下限 $[a_-, a_+]$，则 $u(x_i) = (a_+ - a_-) / (2\sqrt{3})$
 - **三角分布**：$u(x_i) = (a_+ - a_-) / (2\sqrt{6})$
 
-### 1.5 扩展不确定度（Expanded Uncertainty） {: #expanded-uncertainty }
+<h3 id="expanded-uncertainty">1.5 扩展不确定度（Expanded Uncertainty）</h3>
 
 > 参考：[1] §6
 
@@ -110,11 +114,11 @@ $$
 
 ---
 
-## 二、Monte Carlo 不确定度传播方法（JCGM 101:2008） {: #mcm-method }
+<h2 id="mcm-method">二、Monte Carlo 不确定度传播方法（JCGM 101:2008）</h2>
 
 > 参考：[2] JCGM 101:2008
 
-### 2.1 适用场景 {: #mcm-scenarios }
+<h3 id="mcm-scenarios">2.1 适用场景</h3>
 
 > 参考：[2] §5.7–5.8
 
@@ -125,7 +129,7 @@ $$
 - 输出量的 PDF 明显偏离正态分布或 t 分布
 - GUM 方法的有效自由度难以确定
 
-### 2.2 基本步骤 {: #mcm-steps }
+<h3 id="mcm-steps">2.2 基本步骤</h3>
 
 > 参考：[2] §5–§7
 
@@ -165,14 +169,14 @@ $$
    - 概率对称区间：取 $[\eta_{\text{low}}, \eta_{\text{high}}]$
    - 最短包含区间：取长度最小的区间
 
-### 2.3 自适应 Monte Carlo 方法 {: #adaptive-mcm }
+<h3 id="adaptive-mcm">2.3 自适应 Monte Carlo 方法</h3>
 
 > 参考：[2] §7.9
 
 - 推荐初始试验次数 $M = 10^6$，通常可获得 95% 包含区间的 1-2 位有效数字精度（参考 [2] §7.2）
 - 通过逐步增加 $M$ 直到结果达到预设的数值容差
 
-### 2.4 相关性处理 {: #mcm-correlation }
+<h3 id="mcm-correlation">2.4 相关性处理</h3>
 
 > 参考：[2] §6.4.8
 
@@ -186,11 +190,11 @@ $$
 
 ---
 
-## 三、反演值与仪器测量值比对的不确定度分析 {: #inversion-comparison }
+<h2 id="inversion-comparison">三、反演值与仪器测量值比对的不确定度分析</h2>
 
 > 参考：[1][2]
 
-### 3.1 问题场景 {: #comparison-scenario }
+<h3 id="comparison-scenario">3.1 问题场景</h3>
 
 ```
 测量物理量 A  ──→  反演模型  ──→  K_calc（反演计算值）
@@ -202,7 +206,7 @@ $$
 
 **反演方法验证**的常见场景：用一个或多个物理量$A_i$反演得到某个物理量 $K$，然后用一台独立仪器测量的 $K$ 值作为参考，通过比对来评估反演方法的准确性。
 
-### 3.2 不确定度来源分析 {: #uncertainty-sources }
+<h3 id="uncertainty-sources">3.2 不确定度来源分析</h3>
 
 比对涉及三个不确定度分量：
 
@@ -212,7 +216,7 @@ $$
 | 仪器测量值不确定度 | $u(K_{\text{meas}})$ | 参考仪器的校准证书、精度指标 | B 类评定 [1] §4.3 |
 | 比对差值的合成不确定度 | $u(\Delta K)$ | 上述两者的合成 | 不确定度传播定律 [1] §5.1.2 |
 
-### 3.3 完整计算步骤 {: #calculation-steps }
+<h3 id="calculation-steps">3.3 完整计算步骤</h3>
 
 #### 步骤 1：计算反演值 $K_{\text{calc}}$ 的不确定度
 
@@ -279,31 +283,31 @@ $$
 - **$E_n \leq 1$**：反演值与仪器测量值在不确定度范围内一致，反演方法有效
 - **$E_n > 1$**：两者存在显著偏差，需检查反演模型或测量过程是否存在未考虑的系统误差
 
-### 3.4 Monte Carlo 方法处理比对 {: #comparison-mcm }
+<h3 id="comparison-mcm">3.4 Monte Carlo 方法处理比对</h3>
 
 若反演模型复杂或想更准确地评估比对结果，可用 Monte Carlo 方法同时处理所有不确定度来源：
 
-1. 从 $A_1 \sim N(\bar{A}_1, u_{A_1}^2)$、$A_2 \sim N(\bar{A}_2, u_{A_2}^2)$、$A_3 \sim N(\bar{A}_3, u_{A_3}^2)$ 中抽样
+1. 从 <span>$A_1 \sim N(\bar{A}_1, u_{A_1}^2)$</span>、<span>$A_2 \sim N(\bar{A}_2, u_{A_2}^2)$</span>、<span>$A_3 \sim N(\bar{A}_3, u_{A_3}^2)$</span> 中抽样
 2. 对每组样本计算 $K_{\text{calc}, i} = f(A_{1,i}, A_{3,i})$
-3. 从 $K_{\text{meas}} \sim N(\bar{K}_{\text{meas}}, u_{K_{\text{meas}}}^2)$ 中独立抽样（或按仪器 PDF 抽样）
+3. 从 <span>$K_{\text{meas}} \sim N(\bar{K}_{\text{meas}}, u_{K_{\text{meas}}}^2)$</span> 中独立抽样（或按仪器 PDF 抽样）
 4. 计算 $\Delta K_i = K_{\text{calc}, i} - K_{\text{meas}, i}$
 5. 统计 $\Delta K_i$ 的分布，得到：
    - 平均偏差 $\overline{\Delta K}$：反映**系统偏差**
    - 标准差 $u(\Delta K)$：反映**随机不确定度**
    - 95% 包含区间：判断零值是否在区间内（零在区间内说明反演与测量无显著差异）
 
-### 3.5 特殊情况：仪器测量值本身有重复数据 {: #special-cases }
+<h3 id="special-cases">3.5 特殊情况：仪器测量值本身有重复数据</h3>
 
 如果同一参考样品也用仪器重复测量了 $n$ 次：
 
 - 获得 $K_{\text{meas},1}, K_{\text{meas},2}, \dots, K_{\text{meas},n}$
-- 平均值 $\bar{K}_{\text{meas}}$ 和 A 类不确定度 $u(\bar{K}_{\text{meas}}) = s_{K_{\text{meas}}} / \sqrt{n}$
+- 平均值 <span>$\bar{K}_{\text{meas}}$</span> 和 A 类不确定度 <span>$u(\bar{K}_{\text{meas}}) = s_{K_{\text{meas}}} / \sqrt{n}$</span>
 - 此时比对可采用**双样本 t 检验**的思路，或直接用 MCM 处理两组数据的 PDF
 
 
 ---
 
-## 四、关键公式对照表 {: #formula-comparison }
+<h2 id="formula-comparison">四、关键公式对照表</h2>
 
 > 参考：[1][2]
 
@@ -319,7 +323,7 @@ $$
 
 ---
 
-## 五、参考资料 {: #references }
+<h2 id="references">五、参考资料</h2>
 
 1. **JCGM 100:2008** — *Evaluation of measurement data — Guide to the expression of uncertainty in measurement* (GUM)
 2. **JCGM 101:2008** — *Evaluation of measurement data — Supplement 1 to the GUM — Propagation of distributions using a Monte Carlo method*
@@ -327,7 +331,7 @@ $$
 
 ---
 
-## 六、参考资料位置（PDF页码） {: #pdf-references }
+<h2 id="pdf-references">六、参考资料位置（PDF页码）</h2>
 
 ### [1] JCGM 100:2008（GUM）
 
