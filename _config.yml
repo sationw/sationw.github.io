@@ -18,7 +18,7 @@ social:
   github: "https://github.com/sationw"
 
 # Build settings
-markdown: GFM
+markdown: kramdown
 highlighter: rouge
 permalink: /:year/:month/:day/:title/
 

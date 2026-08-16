@@ -38,11 +38,11 @@ date: 2026-08-16
 
 ---
 
-## 一、GUM 不确定度评定框架（JCGM 100:2008） {#gum-framework}
+## 一、GUM 不确定度评定框架（JCGM 100:2008） {: #gum-framework }
 
 > 参考：[1] JCGM 100:2008
 
-### 1.1 基本流程 {#gum-basic-process}
+### 1.1 基本流程 {: #gum-basic-process }
 
 > 参考：[1] §8
 
@@ -55,7 +55,7 @@ date: 2026-08-16
 | **5. 确定扩展不确定度** | $U = k \cdot u_c(y)$，通常取 $k=2$（95%置信水平） |
 | **6. 报告结果** | $y \pm U$，注明包含因子 $k$ |
 
-### 1.2 不确定度传播定律（Law of Propagation of Uncertainty） {#propagation-law}
+### 1.2 不确定度传播定律（Law of Propagation of Uncertainty） {: #propagation-law }
 
 > 参考：[1] §5.1.2
 
@@ -77,7 +77,7 @@ $$
 c_i = \frac{\partial f}{\partial x_i}
 $$
 
-### 1.3 A 类评定（Type A Evaluation） {#type-a-evaluation}
+### 1.3 A 类评定（Type A Evaluation） {: #type-a-evaluation }
 
 > 参考：[1] §4.2
 
@@ -87,7 +87,7 @@ $$
 u(x_i) = \frac{s}{\sqrt{n}} = \sqrt{\frac{1}{n(n-1)} \sum_{k=1}^{n} (x_{ik} - \bar{x}_i)^2}
 $$
 
-### 1.4 B 类评定（Type B Evaluation） {#type-b-evaluation}
+### 1.4 B 类评定（Type B Evaluation） {: #type-b-evaluation }
 
 > 参考：[1] §4.3
 
@@ -97,7 +97,7 @@ $$
 - **均匀分布**：已知上下限 $[a_-, a_+]$，则 $u(x_i) = (a_+ - a_-) / (2\sqrt{3})$
 - **三角分布**：$u(x_i) = (a_+ - a_-) / (2\sqrt{6})$
 
-### 1.5 扩展不确定度（Expanded Uncertainty） {#expanded-uncertainty}
+### 1.5 扩展不确定度（Expanded Uncertainty） {: #expanded-uncertainty }
 
 > 参考：[1] §6
 
@@ -110,11 +110,11 @@ $$
 
 ---
 
-## 二、Monte Carlo 不确定度传播方法（JCGM 101:2008） {#mcm-method}
+## 二、Monte Carlo 不确定度传播方法（JCGM 101:2008） {: #mcm-method }
 
 > 参考：[2] JCGM 101:2008
 
-### 2.1 适用场景 {#mcm-scenarios}
+### 2.1 适用场景 {: #mcm-scenarios }
 
 > 参考：[2] §5.7–5.8
 
@@ -125,7 +125,7 @@ $$
 - 输出量的 PDF 明显偏离正态分布或 t 分布
 - GUM 方法的有效自由度难以确定
 
-### 2.2 基本步骤 {#mcm-steps}
+### 2.2 基本步骤 {: #mcm-steps }
 
 > 参考：[2] §5–§7
 
@@ -165,14 +165,14 @@ $$
    - 概率对称区间：取 $[\eta_{\text{low}}, \eta_{\text{high}}]$
    - 最短包含区间：取长度最小的区间
 
-### 2.3 自适应 Monte Carlo 方法 {#adaptive-mcm}
+### 2.3 自适应 Monte Carlo 方法 {: #adaptive-mcm }
 
 > 参考：[2] §7.9
 
 - 推荐初始试验次数 $M = 10^6$，通常可获得 95% 包含区间的 1-2 位有效数字精度（参考 [2] §7.2）
 - 通过逐步增加 $M$ 直到结果达到预设的数值容差
 
-### 2.4 相关性处理 {#mcm-correlation}
+### 2.4 相关性处理 {: #mcm-correlation }
 
 > 参考：[2] §6.4.8
 
@@ -186,11 +186,11 @@ $$
 
 ---
 
-## 三、反演值与仪器测量值比对的不确定度分析 {#inversion-comparison}
+## 三、反演值与仪器测量值比对的不确定度分析 {: #inversion-comparison }
 
 > 参考：[1][2]
 
-### 3.1 问题场景 {#comparison-scenario}
+### 3.1 问题场景 {: #comparison-scenario }
 
 ```
 测量物理量 A  ──→  反演模型  ──→  K_calc（反演计算值）
@@ -202,7 +202,7 @@ $$
 
 **反演方法验证**的常见场景：用一个或多个物理量$A_i$反演得到某个物理量 $K$，然后用一台独立仪器测量的 $K$ 值作为参考，通过比对来评估反演方法的准确性。
 
-### 3.2 不确定度来源分析 {#uncertainty-sources}
+### 3.2 不确定度来源分析 {: #uncertainty-sources }
 
 比对涉及三个不确定度分量：
 
@@ -212,7 +212,7 @@ $$
 | 仪器测量值不确定度 | $u(K_{\text{meas}})$ | 参考仪器的校准证书、精度指标 | B 类评定 [1] §4.3 |
 | 比对差值的合成不确定度 | $u(\Delta K)$ | 上述两者的合成 | 不确定度传播定律 [1] §5.1.2 |
 
-### 3.3 完整计算步骤 {#calculation-steps}
+### 3.3 完整计算步骤 {: #calculation-steps }
 
 #### 步骤 1：计算反演值 $K_{\text{calc}}$ 的不确定度
 
@@ -279,7 +279,7 @@ $$
 - **$E_n \leq 1$**：反演值与仪器测量值在不确定度范围内一致，反演方法有效
 - **$E_n > 1$**：两者存在显著偏差，需检查反演模型或测量过程是否存在未考虑的系统误差
 
-### 3.4 Monte Carlo 方法处理比对 {#comparison-mcm}
+### 3.4 Monte Carlo 方法处理比对 {: #comparison-mcm }
 
 若反演模型复杂或想更准确地评估比对结果，可用 Monte Carlo 方法同时处理所有不确定度来源：
 
@@ -292,7 +292,7 @@ $$
    - 标准差 $u(\Delta K)$：反映**随机不确定度**
    - 95% 包含区间：判断零值是否在区间内（零在区间内说明反演与测量无显著差异）
 
-### 3.5 特殊情况：仪器测量值本身有重复数据 {#special-cases}
+### 3.5 特殊情况：仪器测量值本身有重复数据 {: #special-cases }
 
 如果同一参考样品也用仪器重复测量了 $n$ 次：
 
@@ -303,7 +303,7 @@ $$
 
 ---
 
-## 四、关键公式对照表 {#formula-comparison}
+## 四、关键公式对照表 {: #formula-comparison }
 
 > 参考：[1][2]
 
@@ -319,7 +319,7 @@ $$
 
 ---
 
-## 五、参考资料 {#references}
+## 五、参考资料 {: #references }
 
 1. **JCGM 100:2008** — *Evaluation of measurement data — Guide to the expression of uncertainty in measurement* (GUM)
 2. **JCGM 101:2008** — *Evaluation of measurement data — Supplement 1 to the GUM — Propagation of distributions using a Monte Carlo method*
@@ -327,7 +327,7 @@ $$
 
 ---
 
-## 六、参考资料位置（PDF页码） {#pdf-references}
+## 六、参考资料位置（PDF页码） {: #pdf-references }
 
 ### [1] JCGM 100:2008（GUM）
 
