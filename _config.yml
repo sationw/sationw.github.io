@@ -26,6 +26,8 @@ permalink: /:year/:month/:day/:title/
 kramdown:
   math_engine: mathjax
   input: GFM
+  syntax_highlighter_opts:
+    default_lang: plaintext
 
 # Collections
 collections:
