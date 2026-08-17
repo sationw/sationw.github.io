@@ -5,7 +5,7 @@ permalink: /notes/
 ---
 
 <p style="color: var(--text-light); margin-bottom: 2rem;">
-  系统整理的学习笔记，涵盖 Python、数据科学、机器学习等领域的知识。
+  系统整理的学习笔记，涵盖数据科学、EM仿真与分析等领域的知识。
 </p>
 
 <div class="card-grid">

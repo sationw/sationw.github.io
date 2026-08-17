@@ -597,6 +597,62 @@ pre code {
   border-bottom: 2px solid var(--border);
 }
 
+/* --- Content Tables --- */
+table {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.5rem auto;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-alt);
+  color: var(--text);
+}
+
+table th,
+table td {
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+table th:last-child,
+table td:last-child {
+  border-right: none;
+}
+
+table thead th {
+  background: var(--primary-light);
+  color: var(--secondary);
+  font-weight: 700;
+  white-space: nowrap;
+  border-bottom: 2px solid var(--primary);
+}
+
+table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+table tbody tr:hover {
+  background: var(--primary-light);
+}
+
+table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+table td:first-child {
+  font-weight: 600;
+  color: var(--secondary);
+}
+
 /* --- Post Navigation --- */
 .post-navigation {
   display: flex;
