@@ -35,6 +35,7 @@ collections:
   notes:
     output: true
     permalink: /notes/:title/
+    future: true
 
 # Defaults
 defaults:
