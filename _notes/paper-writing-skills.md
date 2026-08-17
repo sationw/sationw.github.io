@@ -3,7 +3,7 @@ layout: note
 title: "如何写好一篇科研论文"
 description: "科研论文写作方法总结：以写作顺序为主线，涵盖 C-C-C 结构、图表先行、各部分写作时机与编辑视角的常见错误"
 category: 学术写作
-date: 2026-08-18
+date: 2026-08-17
 permalink: /notes/paper-writing-skills/
 ---
 
