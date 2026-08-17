@@ -40,34 +40,76 @@ title: 首页
   </div>
 </section>
 
-<!-- Recent Posts -->
+<!-- Recent Updates -->
 <section class="section section-alt">
   <div class="container">
-    <h2 class="section-title">最新文章</h2>
+    <h2 class="section-title">最新动态</h2>
     <ul class="post-list">
-      {% for post in site.posts limit:5 %}
       <li class="post-item">
         <div class="post-date-badge">
-          <span class="day">{{ post.date | date: "%d" }}</span>
-          <span class="month">{{ post.date | date: "%b" }}</span>
+          <span class="day">18</span>
+          <span class="month">Aug</span>
         </div>
         <div class="post-info">
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
-          {% if post.categories %}
+          <h3><a href="{{ '/notes/Paper_writing_skills/' | relative_url }}">写论文的"黄金顺序"：先图表、后正文，摘要与标题压轴</a></h3>
+          <p class="post-excerpt">新增笔记《如何写好一篇科研论文》：整合 15 篇权威文献，以"写作顺序"为主线，讲透 C-C-C 结构与各部分的最佳写作时机。</p>
           <div class="post-categories">
-            <i class="fas fa-folder"></i> {{ post.categories | join: ", " }}
+            <i class="fas fa-folder"></i> 笔记
           </div>
-          {% endif %}
         </div>
       </li>
-      {% else %}
       <li class="post-item">
+        <div class="post-date-badge">
+          <span class="day">16</span>
+          <span class="month">Aug</span>
+        </div>
         <div class="post-info">
-          <p style="color: var(--text-muted);">还没有文章，敬请期待！</p>
+          <h3><a href="{{ '/notes/Method_GUM/' | relative_url }}">测量不确定度速查：GUM 与 Monte Carlo 方法全总结</a></h3>
+          <p class="post-excerpt">新增笔记《测量不确定度计算》：GUM (JCGM 100) 与 MCM (JCGM 101) 评定框架，以及反演值与仪器测量的比对不确定度分析。</p>
+          <div class="post-categories">
+            <i class="fas fa-folder"></i> 笔记
+          </div>
         </div>
       </li>
-      {% endfor %}
+      <li class="post-item">
+        <div class="post-date-badge">
+          <span class="day">11</span>
+          <span class="month">Aug</span>
+        </div>
+        <div class="post-info">
+          <h3><a href="{{ '/' | relative_url }}">站点换新装：动态星系背景 × 深色蓝紫主题</a></h3>
+          <p class="post-excerpt">首页与关于页启用动态旋转星系背景，全站切换深色蓝紫主题，相册升级为可自动播放的幻灯片。</p>
+          <div class="post-categories">
+            <i class="fas fa-paint-brush"></i> 站点
+          </div>
+        </div>
+      </li>
+      <li class="post-item">
+        <div class="post-date-badge">
+          <span class="day">06</span>
+          <span class="month">Aug</span>
+        </div>
+        <div class="post-info">
+          <h3><a href="{{ '/projects/sgelinlog/' | relative_url }}">SgelinLog 文献阅读器：本地桌面文献管理与笔记工具</a></h3>
+          <p class="post-excerpt">C# WinForms + WebView2 + SQLite 打造的 Windows 桌面文献阅读器，本地 PDF 阅读与笔记管理，全程离线运行。</p>
+          <div class="post-categories">
+            <i class="fas fa-project-diagram"></i> 项目
+          </div>
+        </div>
+      </li>
+      <li class="post-item">
+        <div class="post-date-badge">
+          <span class="day">06</span>
+          <span class="month">Aug</span>
+        </div>
+        <div class="post-info">
+          <h3><a href="{{ '/gallery/' | relative_url }}">相册上新：祝融峰的日出</a></h3>
+          <p class="post-excerpt">记录美好瞬间，相册新增"日出 · 祝融峰"照片，幻灯片自动播放模式同步上线。</p>
+          <div class="post-categories">
+            <i class="fas fa-images"></i> 相册
+          </div>
+        </div>
+      </li>
     </ul>
   </div>
 </section>

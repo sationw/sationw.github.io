@@ -22,6 +22,11 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:year/:month/:day/:title/
 
+# Kramdown
+kramdown:
+  math_engine: mathjax
+  input: GFM
+
 # Collections
 collections:
   projects:
